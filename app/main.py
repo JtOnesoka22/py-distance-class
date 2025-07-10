@@ -14,14 +14,14 @@ class Distance:
         else:
             return Distance(self.km + other)
 
-    def __iadd__(self, other: int | float | "Distance") -> "Distance"":
+    def __iadd__(self, other: int | float | "Distance") -> "Distance":
         if isinstance(other, Distance):
             self.km += other.km
         else:
             self.km += other
         return self
 
-    def __mul__(self, number: int | float) -> "Distance"":
+    def __mul__(self, number: int | float) -> "Distance":
         return Distance(self.km * number)
 
     def __truediv__(self, number: int | float) -> "Distance":
